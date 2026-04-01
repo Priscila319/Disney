@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador de Personagens Disney</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="manifest" href="manifest.json">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#111111">
+
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="imagem">
+            
+            <img src="https://recreio.com.br/wp-content/uploads/disney/disney_castelo_capa.jpg" 
+                 alt="Castelo da Disney ao entardecer">
+        </div>
+        
+        <h1>Disney</h1> <!-- Mudado de h2 para h1 para melhor semântica -->
+        <hr>
+        
+        <p>Clique no botão para sortear o personagem</p>
+        
+        
+        <button onclick="getPersonagem()" aria-label="Sortear um personagem aleatório da Disney">
+            Sortear
+        </button>
+        <hr>
+
+        
+        <section aria-label="Informações do personagem sorteado">
+            <div id="info">
+                <p><strong>Foto do personagem:</strong></p>
+                
+                <img id="foto" src="" alt="" style="width: 200px; height: auto;">
+            </div>
+
+            <div id="info-nome">
+                <p><strong>Nome do personagem:</strong></p>
+                <div id="nome" aria-live="polite">---</div> <!-- aria-live para anunciar mudanças -->
+            </div>
+
+            <div id="info-filme">
+                <p><strong>Filme: </strong></p>
+                <div id="filme" aria-live="polite">---</div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+
+<script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          
+          navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('SW registrado!', reg))
+            .catch(err => console.error('Erro no SW!', err));
+        });
+      }
+</script>
+
+</body>
+</html>
