@@ -1,4 +1,4 @@
-/* Configurações Gerais */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body {
     padding: 20px;
 }
 
-/* Container Principal */
+
 .main-container {
     background-color: white;
     width: 100%;
@@ -40,13 +40,14 @@ h2 {
     margin-bottom: 10px;
 }
 
+
 hr {
     border: 0;
     border-top: 1px solid #eee;
     margin: 15px 0;
 }
 
-/* Botão Estilizado */
+
 button {
     background-color: #2563eb;
     color: white;
@@ -57,7 +58,7 @@ button {
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.2s;
-    width: 100%; /* Botão ocupa largura total no mobile */
+    width: 100%; 
 }
 
 button:hover {
@@ -69,7 +70,7 @@ button:active {
     transform: scale(0.98);
 }
 
-/* Seção de Informações */
+
 .info-box {
     background-color: #f8fafc;
     padding: 15px;
@@ -78,12 +79,12 @@ button:active {
     text-align: left;
 }
 
-/* Foto do Personagem Sorteado */
+
 #foto {
     display: block;
     width: 100%;
     max-height: 300px;
-    object-fit: contain; /* Não corta a imagem do personagem */
+    object-fit: contain; 
     margin: 10px auto;
     border-radius: 8px;
     background-color: #fff;
@@ -96,7 +97,7 @@ button:active {
     font-weight: 500;
 }
 
-/* Responsividade para telas muito pequenas */
+
 @media (max-width: 380px) {
     .main-container {
         padding: 15px;
@@ -105,4 +106,18 @@ button:active {
     h2 {
         font-size: 1.5rem;
     }
+}
+
+button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+#status-localizacao {
+    display: block; 
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #64748b; 
+    font-style: italic;
 }

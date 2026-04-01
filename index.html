@@ -26,16 +26,18 @@
                  alt="Castelo da Disney ao entardecer">
         </div>
         
-        <h1>Disney</h1> <!-- Mudado de h2 para h1 para melhor semântica -->
+        <h1>Disney</h1> 
         <hr>
         
         <p>Clique no botão para sortear o personagem</p>
-        
-        
-        <button onclick="getPersonagem()" aria-label="Sortear um personagem aleatório da Disney">
-            Sortear
-        </button>
-        <hr>
+
+        <button id="btn-sorteio" onclick="getPersonagem()" aria-label="Sortear um personagem e ver localização">
+        Sortear e Ver Localização
+    </button>
+
+    <hr>
+
+    <p id="status-localizacao" style="color: #555; font-size: 0.9em;"></p>
 
         
         <section aria-label="Informações do personagem sorteado">
