@@ -10,18 +10,15 @@
             const lon = posicao.coords.longitude;
 
             try {
-                // Chamada para a API do OpenStreetMap para pegar o nome do lugar
                 const responseUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
                 const res = await fetch(responseUrl);
                 const data = await res.json();
                 
-                // Pegando a cidade ou o bairro do resultado
                 const localidade = data.address.city || data.address.town || data.address.suburb || "Lugar desconhecido";
                 const estado = data.address.state || "";
                 
                 statusLocal.textContent = `Localização do fã: ${localidade} - ${estado}`;
             } catch (error) {
-                // Caso a API de nomes falhe, mostra as coordenadas como backup
                 statusLocal.textContent = `Localização (Lat: ${lat.toFixed(2)}, Lon: ${lon.toFixed(2)})`;
             }
         }, () => {
@@ -29,9 +26,7 @@
         });
     }
     // ---------------------------------------------------
-
-    // O restante do seu código da API da Disney continua igual abaixo...
-    try {
+   try {
         const response = await fetch("https://api.disneyapi.dev/character");
         const dados = await response.json();
         const listaPersonagens = dados.data;
